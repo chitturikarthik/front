@@ -6,7 +6,7 @@ const Project = () => {
   const [projData, setProjData] = useState([]);
 
   const fetchAllProj = async () => {
-    const res = await axios.get(process.env.REACT_APP_GET_ALL_PROJ);
+    const res = await axios.get(`https://mern-hpvr.onrender.com/getproj`);
     console.log(res);
     setProjData(res.data);
   };  
